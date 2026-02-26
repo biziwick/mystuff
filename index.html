@@ -1,0 +1,206 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biziwick Mvula · IT Portfolio</title>
+  <!-- Font Awesome 6 (free) for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts: Inter + Space Grotesk -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- animated background overlay -->
+  <div class="bg-aura"></div>
+
+  <!-- header / navigation (optional but clean) -->
+  <header class="site-header">
+    <div class="container header-flex">
+      <span class="logo-glow">MV<span class="dot"></span></span>
+      <nav class="main-nav" aria-label="main navigation">
+        <ul>
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION (home) with full picture + uni logo -->
+    <section id="home" class="hero-section">
+      <div class="container hero-grid">
+        <!-- left side: text and university logo block -->
+        <div class="hero-content">
+          <!-- floating university logo (top of left block) -->
+          <div class="uni-logo-wrapper" id="uniLogoContainer">
+            <!-- you can replace the src with your own logo file -->
+            <img src="log.jpeg" 
+                 alt="Malawi University of Business and Applied Sciences Logo" 
+                 class="uni-logo"
+                 id="uniLogo"
+                 loading="lazy">
+          </div>
+          <h1 class="hero-title">
+            <span class="greet">Hi, I'm</span>
+            <span class="name-glow">Biziwick Mvula</span>
+          </h1>
+          <p class="hero-subtitle">
+            <i class="fa-solid fa-graduation-cap" style="color: #4a80f0; margin-right: 0.5rem;"></i>
+            IT Student at <strong class="uni-name">Malawi University of Business and Applied Sciences</strong>
+          </p>
+          <p class="hero-tagline">Building robust systems · data & code enthusiast</p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn primary-btn"><span>View projects</span><i class="fa-solid fa-arrow-down"></i></a>
+          </div>
+        </div>
+
+        <!-- right side: full professional picture (adjust image source) -->
+        <div class="hero-image-wrapper">
+          <div class="image-frame pulse-glow">
+            <!-- replace the src with your own full photo (use square/portrait crop but will appear as full professional) -->
+            <img src="4.jpeg" 
+                 alt="Biziwick Mvula – full portrait" 
+                 class="profile-full"
+                 id="profilePic"
+                 loading="lazy">
+          </div>
+          <!-- small floating badge to reinforce IT profile (optional) -->
+          <div class="floating-badge code-badge"><i class="fa-solid fa-code"></i> 3+ years code</div>
+          <div class="floating-badge db-badge"><i class="fa-solid fa-database"></i> DB design</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION (exactly as requested) -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-super">technical expertise</span>
+          <h2 class="section-title"><span class="accent">3️⃣</span> Technical Skills</h2>
+          <p class="section-description">Core competencies I bring to every project</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Programming Languages -->
+          <div class="skill-card glass-card" data-category="programming">
+            <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+            <h3>🔹 Programming Languages</h3>
+            <ul class="skill-list">
+              <li><span>Python</span><i class="fa-brands fa-python"></i></li>
+              <li><span>Java</span><i class="fa-brands fa-java"></i></li>
+              <li><span>C++</span><i class="fa-solid fa-c"></i></li>
+              <li><span>JavaScript</span><i class="fa-brands fa-js"></i></li>
+            </ul>
+          </div>
+
+          <!-- Web Technologies -->
+          <div class="skill-card glass-card" data-category="web">
+            <div class="card-icon"><i class="fa-solid fa-globe"></i></div>
+            <h3>🔹 Web Technologies</h3>
+            <ul class="skill-list">
+              <li><span>HTML5</span><i class="fa-brands fa-html5"></i></li>
+              <li><span>CSS3</span><i class="fa-brands fa-css3-alt"></i></li>
+              <li><span>React</span><i class="fa-brands fa-react"></i></li>
+              <li class="note-item"><span class="skill-note">(if applicable)</span></li>
+            </ul>
+          </div>
+
+          <!-- Database & DBMS -->
+          <div class="skill-card glass-card" data-category="database">
+            <div class="card-icon"><i class="fa-solid fa-database"></i></div>
+            <h3>🔹 Database & DBMS</h3>
+            <ul class="skill-list">
+              <li><span>MySQL</span><i class="fa-solid fa-database"></i></li>
+              <li><span>SQL</span><i class="fa-solid fa-table"></i></li>
+              <li><span>ER Diagrams</span><i class="fa-solid fa-diagram-project"></i></li>
+              <li><span>Normalization</span><i class="fa-solid fa-layer-group"></i></li>
+              <li><span>Functional Dependencies</span><i class="fa-solid fa-link"></i></li>
+            </ul>
+          </div>
+        </div>
+        <!-- extra subtle note for completeness -->
+        <p class="skills-footnote"><i class="fa-regular fa-star" style="color: #f0b34a;"></i> constantly expanding — next: Node.js & cloud</p>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION (new) with chat_app, notes sharing, voting system -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-super">my work</span>
+          <h2 class="section-title"><span class="accent">📁</span> Featured Projects</h2>
+          <p class="section-description">Real-world applications I've built</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Chat App Project Card -->
+          <div class="project-card glass-card">
+            <div class="project-icon"><i class="fa-solid fa-comments"></i></div>
+            <h3>Chat App</h3>
+            <p class="project-desc">Real-time messaging platform with private rooms and emoji support.</p>
+            <div class="project-tech">
+              <span>React</span><span>Node.js</span><span>Socket.io</span>
+            </div>
+            <a href="#" class="project-link" target="_blank" rel="noopener">View project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <!-- replace href with actual link -->
+          </div>
+
+          <!-- Notes Sharing App Project Card -->
+          <div class="project-card glass-card">
+            <div class="project-icon"><i class="fa-solid fa-note-sticky"></i></div>
+            <h3>Notes Sharing App</h3>
+            <p class="project-desc">Collaborative note-taking with Markdown, categories, and sharing links.</p>
+            <div class="project-tech">
+              <span>Vue.js</span><span>Express</span><span>MongoDB</span>
+            </div>
+            <a href="#" class="project-link" target="_blank" rel="noopener">View project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+
+          <!-- Voting System App Project Card -->
+          <div class="project-card glass-card">
+            <div class="project-icon"><i class="fa-solid fa-check-to-slot"></i></div>
+            <h3>Voting System App</h3>
+            <p class="project-desc">Secure online voting with real-time results, user auth and audit logs.</p>
+            <div class="project-tech">
+              <span>Django</span><span>PostgreSQL</span><span>Bootstrap</span>
+            </div>
+            <a href="#" class="project-link" target="_blank" rel="noopener">View project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <!-- additional placeholder for future projects (optional) -->
+        <p class="projects-footnote"><i class="fa-regular fa-keyboard"></i> more projects on GitHub · links will be updated</p>
+      </div>
+    </section>
+
+    <!-- quick contact / footer area (professional touch) -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="contact-card glass-card">
+          <div class="contact-text">
+            <h3>Let's connect</h3>
+            <p>Biziwick Mvula · IT student @ MUBAS</p>
+            <div class="social-links">
+              <a href="#" aria-label="github"><i class="fa-brands fa-github"></i></a>
+              <a href="#" aria-label="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" aria-label="email"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+          </div>
+          <div class="credit-note">
+            <p>© 2025 · built with <i class="fa-solid fa-heart" style="color: #f25e5e;"></i> for clean code</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- custom javascript (separate file) -->
+  <script src="script.js"></script>
+</body>
+</html>
